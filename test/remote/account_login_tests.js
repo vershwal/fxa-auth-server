@@ -96,6 +96,20 @@ TestServer.start(config)
   )
 
   test(
+    'accepts a `service`',
+    function (t) {
+      var email = server.uniqueEmail()
+      var password = 'abcdef'
+      return Client.createAndVerify(config.publicUrl, email, password, server.mailbox)
+        .then(
+          function (c) {
+            return Client.login(config.publicUrl, email, password, { service: 'sync' })
+          }
+        );
+    }
+  )
+
+  test(
     'teardown',
     function (t) {
       server.stop()
