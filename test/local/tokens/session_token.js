@@ -142,6 +142,7 @@ describe('SessionToken', () => {
             uaOS: 'baz',
             uaOSVersion: 'qux',
             uaDeviceType: 'wibble',
+            uaFormFactor: 'iPhone 6S',
             lastAccessTime: 'mnngh'
           })
           assert.notEqual(token.data, 'foo', 'data was not updated')
@@ -161,6 +162,7 @@ describe('SessionToken', () => {
           assert.equal(token.uaOS, 'baz', 'uaOS was updated')
           assert.equal(token.uaOSVersion, 'qux', 'uaOSVersion was updated')
           assert.equal(token.uaDeviceType, 'wibble', 'uaDeviceType was updated')
+          assert.equal(token.uaFormFactor, 'iPhone 6S', 'uaFormFactor was updated')
           assert.equal(token.lastAccessTime, 'mnngh', 'lastAccessTime was updated')
         })
     }

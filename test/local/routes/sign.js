@@ -58,6 +58,7 @@ describe('/certificate/sign', () => {
         uaBrowserVersion: '55',
         uaOS: 'Windows',
         uaOSVersion: '10',
+        uaFormFactor: undefined
       }, 'third argument was UA info')
 
       assert.equal(mockLog.activityEvent.callCount, 1, 'log.activityEvent was called once')

@@ -522,6 +522,7 @@ describe('userAgent', () => {
       assert.equal(result.uaBrowserVersion, '5.3')
       assert.equal(result.uaOS, 'iOS')
       assert.equal(result.uaDeviceType, 'mobile')
+      assert.equal(result.uaFormFactor, null)
 
       assert.equal(log.info.callCount, 0)
 
@@ -551,6 +552,7 @@ describe('userAgent', () => {
       assert.equal(result.uaBrowserVersion, '6.0')
       assert.equal(result.uaOS, 'iOS')
       assert.equal(result.uaDeviceType, 'tablet')
+      assert.equal(result.uaFormFactor, null)
 
       assert.equal(log.info.callCount, 0)
 
@@ -581,6 +583,7 @@ describe('userAgent', () => {
       assert.equal(result.uaOS, 'iOS')
       assert.equal(result.uaOSVersion, '10.3')
       assert.equal(result.uaDeviceType, 'mobile')
+      assert.equal(result.uaFormFactor, 'iPhone 6S')
 
       assert.equal(log.info.callCount, 0)
 
@@ -610,6 +613,7 @@ describe('userAgent', () => {
       assert.equal(result.uaBrowserVersion, '49.0.2')
       assert.equal(result.uaOS, 'Android')
       assert.equal(result.uaDeviceType, 'mobile')
+      assert.equal(result.uaFormFactor, null)
 
       assert.equal(log.info.callCount, 0)
 
@@ -638,6 +642,7 @@ describe('userAgent', () => {
     assert.equal(result.uaOS, 'Android')
     assert.equal(result.uaOSVersion, '4.4.2')
     assert.equal(result.uaDeviceType, 'mobile')
+    assert.equal(result.uaFormFactor, 'Mobile')
 
     assert.equal(log.info.callCount, 0)
 
@@ -665,6 +670,7 @@ describe('userAgent', () => {
     assert.equal(result.uaOS, 'iOS')
     assert.equal(result.uaOSVersion, '10.3')
     assert.equal(result.uaDeviceType, 'tablet')
+    assert.equal(result.uaFormFactor, 'iPad Mini')
 
     assert.equal(log.info.callCount, 0)
 
